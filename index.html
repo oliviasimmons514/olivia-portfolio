@@ -23,6 +23,7 @@
     </button>
     <nav class="site-nav" id="site-nav">
       <a href="#work">Work</a>
+      <a href="#media">Media</a>
       <a href="#story">Story</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
@@ -93,6 +94,24 @@
         <p>Highlight hook style, editing rhythm, and retention improvements.</p>
         <a href="#" class="text-link">Open Project</a>
       </article>
+    </section>
+
+    <section class="media-manager section-reveal" id="media">
+      <div class="media-head">
+        <p class="eyebrow">Media Library</p>
+        <h2>Upload Images and Videos</h2>
+      </div>
+      <div class="uploader" id="uploader">
+        <p class="uploader-title">Drag and drop files here</p>
+        <p class="uploader-sub">or use the button below to pick files</p>
+        <input id="mediaInput" class="media-input" type="file" accept="image/*,video/*" multiple />
+        <button type="button" class="btn btn-primary" id="uploadTrigger">Choose Files</button>
+      </div>
+      <div class="media-toolbar">
+        <p class="media-note">Supported: images and videos (instagram/tiktok reel clips)</p>
+        <button type="button" class="btn btn-ghost" id="clearMedia">Clear Library</button>
+      </div>
+      <div class="media-grid" id="mediaGrid"></div>
     </section>
 
     <section class="story section-reveal" id="story">

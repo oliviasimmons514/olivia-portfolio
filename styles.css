@@ -307,6 +307,7 @@ h3 {
   color: var(--accent);
 }
 
+.media-manager,
 .story,
 .services,
 .contact {
@@ -314,6 +315,110 @@ h3 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: clamp(1.2rem, 3vw, 2.2rem);
+}
+
+.media-manager {
+  display: grid;
+  gap: 1rem;
+}
+
+.uploader {
+  border: 1px dashed var(--accent-soft);
+  border-radius: 16px;
+  padding: 1.3rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f8ff 100%);
+  text-align: center;
+}
+
+.uploader.is-dragover {
+  border-color: var(--accent);
+  background: linear-gradient(180deg, #ffffff 0%, #e7f4ff 100%);
+}
+
+.uploader-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.uploader-sub {
+  margin: 0.35rem 0 0.9rem;
+  color: var(--muted);
+}
+
+.media-input {
+  display: none;
+}
+
+.media-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.media-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.media-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.media-card img,
+.media-card video {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  background: #e6f0fa;
+}
+
+.media-meta {
+  padding: 0.65rem 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.media-name {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.media-delete {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.3rem 0.65rem;
+  cursor: pointer;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.media-empty {
+  margin: 0;
+  padding: 1rem;
+  color: var(--muted);
+  border: 1px dashed var(--line);
+  border-radius: 12px;
 }
 
 .story {
@@ -412,6 +517,10 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .featured-grid,
   .story,
   .contact {
@@ -453,6 +562,10 @@ h3 {
 
 @media (max-width: 620px) {
   .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .media-grid {
     grid-template-columns: 1fr;
   }
 }
