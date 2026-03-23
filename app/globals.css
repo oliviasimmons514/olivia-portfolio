@@ -4,6 +4,8 @@
 
 :root {
   color-scheme: light;
+  --font-manrope: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-syne: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 * {

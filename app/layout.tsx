@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
-import { Manrope, Syne } from "next/font/google";
 
 import "./globals.css";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope"
-});
-
-const syne = Syne({
-  subsets: ["latin"],
-  variable: "--font-syne"
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://olivia-simmons.vercel.app"),
@@ -51,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${manrope.variable} ${syne.variable} bg-paper font-sans text-ink antialiased`}>
+      <body className="bg-paper font-sans text-ink antialiased">
         {children}
       </body>
     </html>
